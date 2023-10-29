@@ -429,7 +429,7 @@
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 430px) {
     .footer-terms {
         flex-direction: column;
         gap: 0.1rem;

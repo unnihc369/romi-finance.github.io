@@ -6,6 +6,10 @@
     font-size: 3rem;
 }
 
+.page-layout {
+    margin-top: 2rem;
+}
+
 .token {
     display: flex;
     flex-direction: row;
@@ -46,4 +50,20 @@
 
 .width {
     width: 400px;
+}
+
+@media only screen and (max-width: 750px) {
+    .dashboard {
+        margin: 2rem 3.5rem 2rem;
+    }
+
+    .token {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .progress-bar {
+        margin: 2rem auto;
+    }
 }
