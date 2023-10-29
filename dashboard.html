@@ -34,7 +34,7 @@
       <div class="nav-links hide">
         <a href="index.html" class="nav-link">Home</a>
         <a href="dashboard.html" class="nav-link">Dashboard</a>
-        <a href="#" class="nav-link">NFT</a>
+        <a class="nav-link">NFT</a>
         <a href="earn.html" class="nav-link">Earn</a>
         <a href="#" class="nav-link">Buy</a>
         <a href="#" class="nav-link">Referrals</a>
@@ -42,42 +42,72 @@
         <a href="#" class="nav-link">About</a>
       </div>
       <div class="nav-btns">
-        <button class="btn green">Trade</button>
-        <button class="btn" onclick="showModal()"><img src="assets/wallet.svg" alt=""> Connect Wallet</button>
-        <button class="btn eth-btn">
-          <img src="assets/eth.jpg" alt="" class="eth-logo" /><span class="eth">
-            | <i class="bx bx-dots-vertical-rounded"></i
-          ></span>
+        <button class="btn green hide-btn">Trade</button>
+        <button class="btn" onclick="showModal()">
+          <img src="assets/wallet.svg" alt="" /> Connect Wallet
         </button>
+        <button class="btn eth-btn hide-btn">
+          <img
+            src="assets/eth.jpg"
+            alt=""
+            onclick="myFunction()"
+            class="eth-logo dropdown dropbtn"
+          /><span class="eth"> | </span
+          ><i class="bx bx-dots-vertical-rounded"></i>
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+          Networks
+          <a class="drop-link" href="#"><img src="assets/eth.jpg" alt="" class="eth-logo">  <span class="drop-dis">Ethereum</span></a>
+          <a class="drop-link" href="#"><img class="eth-logo" src="assets/settings.svg" alt=""> <span class="drop-dis">Settings</span></a>
+          <a class="drop-link" href="#"><img src="assets/globe.svg" alt="" class="eth-logo"> <span class="drop-dis">Language</span></a>
+        </div>
       </div>
     </div>
     <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times;</a>
-  <a href="index.html" class="nav-link">Home</a>
-        <a href="dashboard.html" class="nav-link">Dashboard</a>
-        <a href="#" class="nav-link">NFT</a>
-        <a href="earn.html" class="nav-link">Earn</a>
-        <a href="#" class="nav-link">Buy</a>
-        <a href="#" class="nav-link">Referrals</a>
-        <a href="#" class="nav-link">Ecosyatem</a>
-        <a href="#" class="nav-link">About</a>
-</div>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="dashboard.html" class="nav-link">Dashboard</a>
+      <a href="#" class="nav-link">NFT</a>
+      <a href="earn.html" class="nav-link">Earn</a>
+      <a href="#" class="nav-link">Buy</a>
+      <a href="#" class="nav-link">Referrals</a>
+      <a href="#" class="nav-link">Ecosyatem</a>
+      <a href="#" class="nav-link">About</a>
+    </div>
     <div id="myModal" class="modal">
       <div class="modal-content">
-        <div class="modal-top">
+        <div class="modal-top border-bottom">
           <p>Connect Wallet</p>
           <span class="close" onclick="closeModal()">&times;</span>
         </div>
         <div class="modal-btns">
-          <button class="btn modal-btn">MetaMask</button>
-          <button class="btn modal-btn">Coinbase Wallet</button>
-          <button class="btn modal-btn">WalletConnect</button>
+          <button class="btn modal-btn">
+            <img class="modal-img" src="assets/metamask.png" alt="" /><span
+              class="modal-span"
+              >MetaMask</span
+            >
+          </button>
+          <button class="btn modal-btn">
+            <img
+              class="modal-img"
+              src="assets/coinbaseWallet.png"
+              alt=""
+            /><span class="modal-span">Coinbase Wallet</span>
+          </button>
+          <button class="btn modal-btn">
+            <img class="modal-img" src="assets/walletconnect.svg" alt="" /><span
+              class="modal-span"
+              >WalletConnect</span
+            >
+          </button>
         </div>
       </div>
     </div>
 
     <div class="dashboard">
-      <div class="default-container DashboardV2 page-layout">
+      <div class="default-container">
         <div class="section-title-block">
           <div class="section-title-icon"></div>
           <div class="section-title-content">

@@ -32,7 +32,7 @@
       <div class="nav-links hide">
         <a href="index.html" class="nav-link">Home</a>
         <a href="dashboard.html" class="nav-link">Dashboard</a>
-        <a href="#" class="nav-link dropbtn">NFT</a>
+        <a class="nav-link">NFT</a>
         <a href="earn.html" class="nav-link">Earn</a>
         <a href="#" class="nav-link">Buy</a>
         <a href="#" class="nav-link">Referrals</a>
@@ -45,10 +45,20 @@
           <img src="assets/wallet.svg" alt="" /> Connect Wallet
         </button>
         <button class="btn eth-btn hide-btn">
-          <img src="assets/eth.jpg" alt="" class="eth-logo" /><span class="eth">
-            | <i class="bx bx-dots-vertical-rounded"></i
-          ></span>
+          <img
+            src="assets/eth.jpg"
+            alt=""
+            onclick="myFunction()"
+            class="eth-logo dropdown dropbtn"
+          /><span class="eth"> | </span
+          ><i class="bx bx-dots-vertical-rounded"></i>
         </button>
+        <div id="myDropdown" class="dropdown-content">
+          Networks
+          <a class="drop-link" href="#"><img src="assets/eth.jpg" alt="" class="eth-logo">  <span class="drop-dis">Ethereum</span></a>
+          <a class="drop-link" href="#"><img class="eth-logo" src="assets/settings.svg" alt=""> <span class="drop-dis">Settings</span></a>
+          <a class="drop-link" href="#"><img src="assets/globe.svg" alt="" class="eth-logo"> <span class="drop-dis">Language</span></a>
+        </div>
       </div>
     </div>
     <div id="mySidenav" class="sidenav">
@@ -176,8 +186,8 @@
             </div>
             <div class="rating">Ethereum APR: 0.00%</div>
             <div class="b-coln">
-              <button class="btn green width-full">Buy</button>
-              <button class="btn width-full">Read more</button>
+              <button class="btn green width-full center-text">Buy</button>
+              <button class="btn width-full center-text">Read more</button>
             </div>
           </div>
           <div class="b-card">
@@ -191,8 +201,8 @@
             </div>
             <div class="rating">Ethereum APR: 1,643,462,651.95%</div>
             <div class="b-coln">
-              <button class="btn green width-full">Buy</button>
-              <button class="btn width-full">Read more</button>
+              <button class="btn green width-full center-text">Buy</button>
+              <button class="btn width-full center-text">Read more</button>
             </div>
           </div>
         </div>
@@ -251,6 +261,23 @@
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
       }
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown menu if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
     </script>
   </body>
 </html>
