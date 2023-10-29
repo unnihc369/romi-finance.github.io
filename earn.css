@@ -1,0 +1,65 @@
+.earn {
+    margin: 4.5rem 7.5rem 2rem;
+}
+
+.earn-head {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.margin-bt {
+    margin-bottom: 8.2rem;
+}
+
+.earn-dis {
+    color: #cecece;
+}
+
+.earn-content {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.left {
+    color: #cecece;
+}
+
+.earn-card {
+    margin-top: 1rem;
+    border: 1px solid #818181;
+    border-radius: 4px;
+}
+
+.earn-card-title {
+    padding: .8rem;
+    border-bottom: 1px solid #818181;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #818181;
+}
+
+.earn-card-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .8rem;
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+.margin-left {
+    margin-left: 1rem;
+}
+
+@media only screen and (max-width: 750px) {
+    .earn-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 1.5rem;
+    }
+}

@@ -1,0 +1,49 @@
+.dashboard {
+    margin: 3rem 8.5rem 2rem;
+}
+
+.Page-title {
+    font-size: 3rem;
+}
+
+.token {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@property --progress-value {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+@keyframes progress {
+    to {
+        --progress-value: 99;
+    }
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background:
+        radial-gradient(closest-side, black 85%, transparent 80% 100%),
+        conic-gradient(rgb(41, 56, 255) calc(var(--progress-value) * 1%), rgb(124, 133, 252) 0);
+    animation: progress 2s 1 forwards;
+}
+
+.progress-bar::before {
+    counter-reset: percentage var(--progress-value);
+    content: 'Distribution';
+    animation: progress 2s 1 forwards;
+}
+
+.width {
+    width: 400px;
+}

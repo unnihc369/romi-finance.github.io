@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-HcZyMsUMi7Ygd9tiSYjZGxu5/fULpxoFiJ4x3tbda4bY5K3HgvZVZ8w8ds75BSE+OnKlFVZUgFQav3TvfMWtBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="earn.css" />
+  </head>
+  <body>
+    <div class="nav-bar">
+      <div class="nav-logo">
+        
+        <span class="nav-hide" onclick="openNav()">&#9776;</span>
+        <img class="nav-img" src="assets/New Logo.png" alt="" /><span
+          >Romi Finance</span
+        >
+      </div>
+      <div class="nav-links hide">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="#" class="nav-link">NFT</a>
+        <a href="earn.html" class="nav-link">Earn</a>
+        <a href="#" class="nav-link">Buy</a>
+        <a href="#" class="nav-link">Referrals</a>
+        <a href="#" class="nav-link">Ecosyatem</a>
+        <a href="#" class="nav-link">About</a>
+      </div>
+      <div class="nav-btns">
+        <button class="btn green">Trade</button>
+        <button class="btn" onclick="showModal()"><img src="assets/wallet.svg" alt=""> Connect Wallet</button>
+        <button class="btn eth-btn">
+          <img src="assets/eth.jpg" alt="" class="eth-logo" /><span class="eth">
+            | <i class="bx bx-dots-vertical-rounded"></i
+          ></span>
+        </button>
+      </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html" class="nav-link">Home</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="#" class="nav-link">NFT</a>
+        <a href="earn.html" class="nav-link">Earn</a>
+        <a href="#" class="nav-link">Buy</a>
+        <a href="#" class="nav-link">Referrals</a>
+        <a href="#" class="nav-link">Ecosyatem</a>
+        <a href="#" class="nav-link">About</a>
+</div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-top">
+          <p>Connect Wallet</p>
+          <span class="close" onclick="closeModal()">&times;</span>
+        </div>
+        <div class="modal-btns">
+          <button class="btn modal-btn">MetaMask</button>
+          <button class="btn modal-btn">Coinbase Wallet</button>
+          <button class="btn modal-btn">WalletConnect</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="earn">
+      <div class="earn-head"><b>Earn</b></div>
+      <div class="earn-dis">Stake $ZOMI and $ZLP to earn rewards.</div>
+      <div class="earn-content">
+        <div class="earn-card">
+          <div class="earn-card-title">$ZOMI</div>
+          <div class="earn-card-rows border-bottom">
+            <div class="earn-card-row">
+              <div class="left">Price</div>
+              <div class="right">$0.00</div>
+            </div>
+            <div class="earn-card-row">
+              <div class="left">Wallet</div>
+              <div class="right">... $ZOMI ($...)</div>
+            </div>
+            <div class="earn-card-row">
+              <div class="left">Staked</div>
+              <div class="right">... $ZOMI ($...)</div>
+            </div>
+          </div>
+          <div class="earn-card-rows border-bottom">
+            <div class="earn-card-row">
+              <div class="left">APR</div>
+              <div class="right">...%</div>
+            </div>
+            <div class="earn-card-row">
+              <div class="left">Rewards</div>
+              <div class="right">$...</div>
+            </div>
+            <div class="earn-card-row">
+              <div class="left">Multiplier Points APR</div>
+              <div class="right">100.00%</div>
+            </div>
+            <div class="earn-card-row">
+              <div class="left">Boost Percentage</div>
+              <div class="right">...%</div>
+            </div>
+          </div>
+          <div class="earn-card-rows">
+            <div class="earn-card-row">
+              <div class="left">Total Staked</div>
+              <div class="right">0 $ZOMI ($...)</div>
+            </div>
+            <div class="earn-card-row border-bottom">
+              <div class="left">Total Supply</div>
+              <div class="right">10,000 $ZOMI ($10)</div>
+            </div>
+            <div class="earn-card-row">
+              <button class="btn green">Buy $ZOMI</button>
+            </div>
+          </div>
+        </div>
+        <div class="earn-card">
+          <div class="earn-card-title">Total Rewards</div>
+          <div class="flex-just-sb">
+            <div class="earn-card-rows border-bottom">
+              <div class="earn-card-row">
+                <div class="left">ETH (WETH)</div>
+                <div class="right">...($...)</div>
+              </div>
+              <div class="earn-card-row">
+                <div class="left">$ZOMI</div>
+                <div class="right">... esZOMI ($...)</div>
+              </div>
+              <div class="earn-card-row">
+                <div class="left">Escrowed $ZOMI</div>
+                <div class="right">...($...)</div>
+              </div>
+              <div class="earn-card-row">
+                <div class="left">Multiplier Points</div>
+                <div class="right">...</div>
+              </div>
+              <div class="earn-card-row">
+                <div class="left">Staked Multiplier Points</div>
+                <div class="right">...</div>
+              </div>
+              <div class="earn-card-row margin-bt">
+                <div class="left">Total</div>
+                <div class="right">$...</div>
+              </div>
+            </div>
+            <div class="earn-card-rows">
+              <div class="earn-card-row flex-start margin-top">
+                <button class="btn green" onclick="showModal()">
+                  Connect Wallet
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="earn-card">
+          <div class="earn-card-title">$ZLP (Etherem)</div>
+          <div class="earn-card-rows border-bottom">
+            <div class="earn-card-row">
+              <div class="left">Price</div>
+              <div class="right">$...</div>
+            </div>
+            <div class="earn-card-row">
+              <div class="left">Wallet</div>
+              <div class="right">... $ZLP ($...)</div>
+            </div>
+            <div class="earn-card-row">
+              <div class="left">Staked</div>
+              <div class="right">... $ZLP ($...)</div>
+            </div>
+          </div>
+          <div class="earn-card-rows border-bottom">
+            <div class="earn-card-row">
+              <div class="left">APR</div>
+              <div class="right">...%</div>
+            </div>
+            <div class="earn-card-row">
+              <div class="left">Rewards</div>
+              <div class="right">$...</div>
+            </div>
+            <div class="earn-card-row">
+              <div class="left">Multiplier Points APR</div>
+              <div class="right">100.00%</div>
+            </div>
+            <div class="earn-card-row">
+              <div class="left">Boost Percentage</div>
+              <div class="right">...%</div>
+            </div>
+          </div>
+          <div class="earn-card-rows">
+            <div class="earn-card-row">
+              <div class="left">Total Staked</div>
+              <div class="right">... $ZOMI ($...)</div>
+            </div>
+            <div class="earn-card-row border-bottom">
+              <div class="left">Total Supply</div>
+              <div class="right">... $ZOMI ($...)</div>
+            </div>
+            <div class="earn-card-row flex-start">
+              <button class="btn green">Buy $ZLP</button>
+              <button class="btn green margin-left">Sell $ZLP</button>
+            </div>
+          </div>
+        </div>
+        <div class="earn-card">
+          <div class="earn-card-title">Escrowed $ZOMI</div>
+          <div class="earn-card-rows border-bottom">
+            <div class="earn-card-row">
+              <div class="left">Price</div>
+              <div class="right">$0.00</div>
+            </div>
+            <div class="earn-card-row">
+              <div class="left">Wallet</div>
+              <div class="right">... esZOMI ($...)</div>
+            </div>
+            <div class="earn-card-row">
+              <div class="left">Staked</div>
+              <div class="right">... esZOMI ($...)</div>
+            </div>
+          </div>
+          <div class="earn-card-rows border-bottom">
+            <div class="earn-card-row">
+              <div class="left">APR</div>
+              <div class="right">...%</div>
+            </div>
+            <div class="earn-card-row">
+              <div class="left">Rewards</div>
+              <div class="right">$...</div>
+            </div>
+            <div class="earn-card-row">
+              <div class="left">Multiplier Points APR</div>
+              <div class="right">100.00%</div>
+            </div>
+            <div class="earn-card-row">
+              <div class="left">Boost Percentage</div>
+              <div class="right">...%</div>
+            </div>
+          </div>
+          <div class="earn-card-rows">
+            <div class="earn-card-row">
+              <div class="left">Total Staked</div>
+              <div class="right">... esZOMI ($...)</div>
+            </div>
+            <div class="earn-card-row border-bottom">
+              <div class="left">Total Supply</div>
+              <div class="right">1,023,379 esZOMI ($1,045)</div>
+            </div>
+            <div class="earn-card-row flex-start">
+              <button class="btn green" onclick="showModal()">
+                Connect Wallet
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="earn-head"><b>Vest</b></div>
+      <div class="earn-dis">
+        Convert esZOMI tokens to $ZOMI <br />
+        Please read the vesting details before using the vaults.
+      </div>
+      <div class="earn-content">
+        <div class="earn-card">
+          <div class="earn-card-title">$ZOMI Vault</div>
+          <div class="earn-card-rows">
+            <div class="earn-card-row">
+              <div class="left">Staked Tokens</div>
+              <div class="right">...</div>
+            </div>
+            <div class="earn-card-row">
+              <div class="left">Reserved for Vesting</div>
+              <div class="right">0.00 / ...</div>
+            </div>
+            <div class="earn-card-row">
+              <div class="left">Vesting Status</div>
+              <div class="right">0.0000 / 0.0000</div>
+            </div>
+            <div class="earn-card-row border-bottom">
+              <div class="left">Claimable</div>
+              <div class="right">0.0000 $ZOMI</div>
+            </div>
+            <div class="earn-card-row flex-start">
+              <button class="btn green" onclick="showModal()">
+                Connect Wallet
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="earn-card">
+          <div class="earn-card-title">$ZOMI Vault</div>
+          <div class="earn-card-rows">
+            <div class="earn-card-row">
+              <div class="left">Staked Tokens</div>
+              <div class="right">...</div>
+            </div>
+            <div class="earn-card-row">
+              <div class="left">Reserved for Vesting</div>
+              <div class="right">0.00 / ...</div>
+            </div>
+            <div class="earn-card-row">
+              <div class="left">Vesting Status</div>
+              <div class="right">0.0000 / 0.0000</div>
+            </div>
+            <div class="earn-card-row border-bottom">
+              <div class="left">Claimable</div>
+              <div class="right">0.0000 $ZOMI</div>
+            </div>
+            <div class="earn-card-row flex-start">
+              <button class="btn green" onclick="showModal()">
+                Connect Wallet
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-logo">
+        <h2>Romi Finance</h2>
+      </div>
+      <div class="footer-links">
+        <a href=""><i class="bx bxl-twitter custom-icon-size"></i></a>
+        <a href=""><i class="bx bxl-github custom-icon-size"></i></a>
+        <a href=""><i class="bx bxl-telegram custom-icon-size"></i></a>
+        <a href=""><i class="bx bxl-discord-alt custom-icon-size"></i></a>
+        <a href=""><i class="bx bxl-medium custom-icon-size"></i></a>
+      </div>
+      <div class="footer-terms">
+        <a href="">Terms and Conditions</a>
+
+        <a href="">Referral Terms</a>
+
+        <a href="">Media Kit</a>
+      </div>
+    </div>
+    <script>
+      var modal = document.getElementById("myModal");
+
+      var btn = document.querySelector("button");
+
+      var span = document.getElementsByClassName("close")[0];
+
+      function showModal() {
+        modal.style.display = "block";
+      }
+
+      function closeModal() {
+        modal.style.display = "none";
+      }
+
+      window.onclick = function (event) {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+
+      const sidebar = document.getElementById("sidebar");
+      const toggleSidebarButton = document.getElementById("toggleSidebar");
+
+      toggleSidebarButton.addEventListener("click", () => {
+        sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
+      });
+      function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+    </script>
+  </body>
+</html>
