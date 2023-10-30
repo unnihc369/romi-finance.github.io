@@ -67,3 +67,9 @@
         margin: 2rem auto;
     }
 }
+
+@media only screen and (max-width: 950px) {
+    .dashboard {
+        margin: 3rem 3.5rem 2rem;
+    }
+}
