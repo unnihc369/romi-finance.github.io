@@ -4,7 +4,8 @@
 
 .earn-head {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-weight: 500;
+    margin-bottom: .4rem;
 }
 
 .margin-bt {
@@ -16,7 +17,7 @@
 }
 
 .earn-content {
-    margin-top: 1rem;
+    margin-top: .4rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
@@ -31,6 +32,10 @@
 
 .left {
     color: #cecece;
+}
+
+.right {
+    font-weight: 500;
 }
 
 .earn-card {
@@ -52,7 +57,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .8rem;
+    padding: .6rem .85rem;
 }
 
 .flex-start {
@@ -80,13 +85,26 @@
 }
 
 @media only screen and (max-width: 1332px) {
-    .width{
+    .width {
         width: 100%;
     }
+
     .earn-cont {
         margin-top: 1rem;
         display: grid;
-        grid-template-columns: 1fr ;
+        grid-template-columns: 1fr;
         grid-gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .earn-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 1.5rem;
+    }
+
+    .earn {
+        margin: 3rem 2rem 2rem;
     }
 }
